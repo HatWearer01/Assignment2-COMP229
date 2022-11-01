@@ -1,0 +1,41 @@
+<!-- partials -->
+
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/main_nav.ejs') %>
+
+<%- include('partials/content.ejs') %>
+
+<!-- content -->
+
+<div class="content">
+    <h4>Here is my contact info:</h4>
+    <ul class="list-group">
+        <li class="list-group-item">Phone number: 777-777-7777</li>
+        <li class="list-group-item">Email: fakemail@gmail.com</li>
+        <li class="list-group-item">Mail address: 8763 Johns St.</li>
+      </ul>
+      <div class="container">
+        <form action="/">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name...">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="About you..." style="height:30px; resize: none;"></textarea>
+          <button onclick="location.href='/'">Submit</button>
+        </form>
+      </div>
+</div>
+
+<!-- partials -->
+
+<%- include('partials/footer.ejs') %>

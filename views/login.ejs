@@ -1,0 +1,28 @@
+<!-- partials -->
+
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/main_nav.ejs') %>
+
+<%- include('partials/content.ejs') %>
+
+<!-- content -->
+
+<div class="content">
+    <h4>Enter login credentials</h4>
+      <div class="container">
+        <form method="post" action="/login">
+          <label for="user">Username</label>
+          <input type="text" id="username" name="username" placeholder="Username...">
+      
+          <label for="pass">Password</label>
+          <input type="password" id="password" name="password" placeholder="Password...">
+      
+          <input type="submit" value="Login"></input>
+        </form>
+      </div>
+</div>
+
+<!-- partials -->
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,39 @@
+<!-- partials -->
+
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/main_nav.ejs') %>
+
+<%- include('partials/content.ejs') %>
+
+<!-- content -->
+
+<div class="container">
+  <div class="col-md-offset-1 col-md-10">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+    <% for (let count = 0; count < contacts.length; count++) { %>
+        <tr>
+        <td class="text-center"><%= contacts[count].Name %></td>
+        <td class="text-center"><%= contacts[count].Number %></td>
+        <td class="text-center"><%= contacts[count].Email %></td>
+
+        <td class="text-center">
+            <a href="/update/<%= contacts[count]._id %>" class="btn btn-primary">
+            <i class="fa fa-plus"></i>Update</a>
+          </td>
+          <td class="text-center">
+          
+          <a href="/delete/<%= contacts[count]._id %>" class="btn btn-warning btn-sm">
+            <i class="fas fa-trash"></i>Delete</a>
+          </td>
+        </tr>
+        <% } %> 
+      </table>
+      </div>      
+  </div>
+</div>
+
+<!-- partials -->
+
+<%- include('partials/footer.ejs') %>
